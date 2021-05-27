@@ -1,5 +1,5 @@
 import discord
-import wow_news_bot.config as cfg
+import config as cfg
 from discord.ext import commands
 
 class Help(commands.DefaultHelpCommand):
@@ -70,7 +70,7 @@ async def on_command_error(ctx, error):
 async def on_ready():
     print(
         f'Logged in as {bot.user.name}#{bot.user.discriminator} with user ID {bot.user.id}')
-    bot.load_extension('wow_news_bot.cogs.wow.News')
+    bot.load_extension('cogs.wow.News')
     print('Info Bot has started...')
 
 

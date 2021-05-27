@@ -1,10 +1,10 @@
 import discord
 from discord.ext import commands, tasks
-from wow_news_bot.logger import DatabaseLogger
-from wow_news_bot.cogs.wow.wownewsdb import WoWNewsDB
+from logger import DatabaseLogger
+from cogs.wow.wownewsdb import WoWNewsDB
 
-import wow_news_bot.cogs.wow.config as cfg
-import wow_news_bot.cogs.wow.messageembedder as me
+import cogs.wow.config as cfg
+import cogs.wow.messageembedder as me
 
 
 class WoWNewsCog(commands.Cog, name='World of Warcraft News'):

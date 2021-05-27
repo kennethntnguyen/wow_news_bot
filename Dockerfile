@@ -1,13 +1,15 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.8
+FROM python:3.8.10-slim
 
-WORKDIR .
+ENV MONGODB_CONNECTION_STRING="" \
+    DISCORD_BOT_TOKEN=""
 
-COPY requirements.txt requirements.txt
-
-RUN python3.8 -m pip install -r requirements.txt
+WORKDIR /app
 
 COPY . .
 
-CMD ["python3.8","start_wow_news_bot.py"]
+RUN python3.8 -m pip install --no-cache-dir -r requirements.txt
+
+CMD ["python3.8","wow_news_bot.py"]
+  

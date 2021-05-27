@@ -1,5 +1,5 @@
 import datetime
-import wow_news_bot.cogs.wow.config as cfg
+import cogs.wow.config as cfg
 from motor import motor_asyncio
 
 

@@ -1,0 +1,1 @@
+docker run -td wow-news-bot:latest
